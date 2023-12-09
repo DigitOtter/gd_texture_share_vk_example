@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://crsco1hfm62t6"]
+
+[ext_resource type="Script" path="res://tsv_sender.gd" id="1_kk8k6"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_fjkie"]
+
+[sub_resource type="TsvReceiveTexture" id="TsvReceiveTexture_a4ymf"]
+shared_texture_name = "gd_shared"
+
+[node name="HSplitContainer" type="HSplitContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sender" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("ImageTexture_fjkie")
+script = ExtResource("1_kk8k6")
+
+[node name="Receiver" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("TsvReceiveTexture_a4ymf")
